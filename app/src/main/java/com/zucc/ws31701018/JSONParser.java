@@ -13,13 +13,13 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class JSONPareser {
+public class JSONParser {
     static InputStream is = null;
     static JSONObject sReturnJsonObject = null;
     static String sRawJsonString = "";
-    public JSONPareser(){}
+    public JSONParser(){}
 
-    public JSONObject getJSONFromUrl(String url) throws MalformedURLException {
+    public JSONObject getJSONFromUrl(String url){
         try{
             URL urlobj = new URL(url);
             HttpURLConnection conn = (HttpURLConnection)urlobj.openConnection();
